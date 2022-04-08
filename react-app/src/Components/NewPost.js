@@ -11,6 +11,14 @@ const NewPost = () => {
       title,
       body
     })
+    const contents = {
+      "id": id,
+      "title": title,
+      "body": body
+    }
+    axios.post("http://localhost:3002/post", contents)
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error))
   }
 
   return <div>
